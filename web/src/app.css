@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root[data-theme="light"] {
+	--bg-primary: #fafafa;
+	--bg-secondary: #ffffff;
+	--bg-tertiary: #f5f5f5;
+	--bg-hover: #eeeeee;
+	
+	--text-primary: #0a0a0a;
+	--text-secondary: #525252;
+	--text-tertiary: #737373;
+	--text-inverse: #ffffff;
+	
+	--border-primary: #e5e5e5;
+	--border-secondary: #d4d4d4;
+	
+	--accent-primary: #2563eb;
+	--accent-hover: #1d4ed8;
+	
+	--success: #16a34a;
+	--warning: #ea580c;
+	--error: #dc2626;
+	--info: #0891b2;
+	
+	--severity-low: #3b82f6;
+	--severity-medium: #f59e0b;
+	--severity-high: #ef4444;
+	--severity-critical: #991b1b;
+	
+	--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+	--shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+	--shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme="dark"] {
+	--bg-primary: #0a0a0a;
+	--bg-secondary: #171717;
+	--bg-tertiary: #262626;
+	--bg-hover: #404040;
+	
+	--text-primary: #fafafa;
+	--text-secondary: #a3a3a3;
+	--text-tertiary: #737373;
+	--text-inverse: #0a0a0a;
+	
+	--border-primary: #262626;
+	--border-secondary: #404040;
+	
+	--accent-primary: #3b82f6;
+	--accent-hover: #2563eb;
+	
+	--success: #22c55e;
+	--warning: #f97316;
+	--error: #ef4444;
+	--info: #06b6d4;
+	
+	--severity-low: #60a5fa;
+	--severity-medium: #fbbf24;
+	--severity-high: #f87171;
+	--severity-critical: #dc2626;
+	
+	--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+	--shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+	--shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+body {
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	background: var(--bg-primary);
+	color: var(--text-primary);
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code, pre, .mono {
+	font-family: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+
+button {
+	font-family: inherit;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	transition: all 0.2s;
+}
+
+input, select, textarea {
+	font-family: inherit;
+	color: var(--text-primary);
+	background: var(--bg-secondary);
+	border: 1px solid var(--border-primary);
+	outline: none;
+	transition: all 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+	border-color: var(--accent-primary);
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--border-secondary);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--text-tertiary);
+}

@@ -1,0 +1,50 @@
+[package]
+name = "network-ids-core"
+version = "0.1.0"
+edition = "2021"
+description = "Core ML-powered network intrusion detection system"
+license = "MIT"
+authors = ["Network IDS Team"]
+rust-version = "1.75"
+
+[lib]
+name = "network_ids_core"
+path = "src/lib.rs"
+
+[dependencies]
+# Workspace dependencies
+candle-core = { workspace = true }
+candle-nn = { workspace = true }
+# Removed candle-optimizers as it doesn't exist - optimizers are in candle-nn
+tokio = { workspace = true }
+pcap = { workspace = true }
+pnet = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+dashmap = { workspace = true }
+parking_lot = { workspace = true }
+ndarray = { workspace = true }
+statrs = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+num-traits = { workspace = true }
+tokio-util = "0.7"
+sysinfo = "0.30"
+
+[features]
+default = ["real-time"]
+real-time = ["tokio/rt-multi-thread"]
+simulation = []
+cuda = ["candle-core/cuda"]
+metal = ["candle-core/metal"]
+
+[dev-dependencies]
+tokio-test = "0.4"
+criterion = "0.5"
+proptest = "1.4"
+

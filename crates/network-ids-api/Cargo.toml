@@ -1,0 +1,31 @@
+[package]
+name = "network-ids-api"
+version = "0.1.0"
+edition = "2021"  # Changed from 2024 to avoid candle-core compatibility issues
+description = "REST API server for Network IDS"
+
+[dependencies]
+# Local dependencies
+network-ids-core = { path = "../network-ids-core" }
+
+# Workspace dependencies
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+anyhow = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+
+# Web framework
+axum = { workspace = true }
+tower = { workspace = true }
+tower-http = { workspace = true }
+hyper = { workspace = true }
+
+# Additional API dependencies
+tokio-tungstenite = { workspace = true }
+futures-util = { workspace = true }
+reqwest = { workspace = true }
+dotenv = { workspace = true }
